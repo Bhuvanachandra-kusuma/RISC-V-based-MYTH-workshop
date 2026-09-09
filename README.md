@@ -321,4 +321,8 @@ Simulation waveforms — decode signals, memory read/write activity, and the ins
 ## Credits
 
 - Workshop: RISC-V based MYTH, NASSCOM / VLSI System Design (VSD), delivered with Redwood EDA / Makerchip material
-- Repo structure inspired by [chinmaya24163/NASSCOM-RISC-V-MYTH](https://github.com/chinmaya24163/NASSCOM-RISC-V-MYTH)
+
+## References
+
+- [RISC-V MYTH Workshop (Steve Hoover)](https://github.com/stevehoover/RISC-V_MYTH_Workshop) — original workshop repository, referenced in the TL-Verilog source header
+- [Makerchip IDE](https://www.makerchip.com/ide/) — online IDE used to write, compile, and simulate the TL-Verilog code in `src/`
