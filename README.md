@@ -1,6 +1,6 @@
 # NASSCOM–VSD RISC-V based MYTH — My Workshop Notes & Lab Screenshots
 
-Personal day-wise notes and lab screenshots from working through the **RISC-V based MYTH (Microprocessor for You in Thirty Hours)** program (NASSCOM / VSD, using the Redwood EDA / Makerchip curriculum). The structure of this repo is modeled on [chinmaya24163/NASSCOM-RISC-V-MYTH](https://github.com/chinmaya24163/NASSCOM-RISC-V-MYTH), which documents the same workshop — credit to that repo for the day-wise format.
+Personal day-wise notes and lab screenshots from working through the **RISC-V based MYTH (Microprocessor for You in Thirty Hours)** program (NASSCOM / VSD, using the Redwood EDA / Makerchip curriculum).
 
 All screenshots here are from my own run of the workshop VM (`riscv_workshop_collaterals`) and the Makerchip online IDE, captured while going through the lecture videos and labs over a few study sessions.
 
