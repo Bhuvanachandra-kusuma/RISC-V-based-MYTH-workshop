@@ -30,7 +30,9 @@ All screenshots here are from my own run of the workshop VM (`riscv_workshop_col
 ├── day2/images/   (27 screenshots) — ABI & basic verification flow
 ├── day3/images/   (27 screenshots) — TL-Verilog & Makerchip digital logic
 ├── day4/images/   (11 screenshots) — Single-cycle RISC-V CPU micro-architecture
-└── day5/images/   (11 screenshots) — Complete pipelined RISC-V CPU
+├── day5/images/   (11 screenshots) — Complete pipelined RISC-V CPU
+└── src/
+    └── pipelined_risc-v_sum1to9.tlv   — final TL-Verilog source for the pipelined RV32I core
 ```
 
 ---
@@ -285,6 +287,29 @@ All screenshots here are from my own run of the workshop VM (`riscv_workshop_col
 </details>
 
 ---
+
+## Final core — pipelined RV32I in TL-Verilog
+
+The finished CPU is in [`src/pipelined_risc-v_sum1to9.tlv`](src/pipelined_risc-v_sum1to9.tlv). It's a 5-stage pipelined RV32I core, written in TL-Verilog and run on the [Makerchip](https://makerchip.com) IDE, that executes a test program summing 1 through 9 and checks the result against the expected value of 45 via the `*passed` assertion.
+
+You can verify it yourself:
+1. Go to [makerchip.com](https://makerchip.com) → IDE.
+2. Paste in the contents of `src/pipelined_risc-v_sum1to9.tlv`.
+3. Compile and open the waveform — `*passed` should go high once register `x15` holds `45`.
+
+*(If you have a saved/shareable link to your own Makerchip project for this core, drop it in here — e.g. `[Open in Makerchip](your-link-here)` — so others can view it directly without re-pasting the code.)*
+
+### Diagram and waveforms
+
+Block diagram of the compiled core, showing the CPU pipeline hierarchy along with the instruction memory, register file, and data memory blocks:
+
+<img src="images/BlockDiagram.png" width="500">
+
+Simulation waveforms — decode signals, memory read/write activity, and the instruction-type flags (`$is_add`, `$is_addi`, `$is_blt`, ...) toggling cycle by cycle as the sum-1-to-9 program runs:
+
+<img src="images/Waveform1.png" width="800">
+<img src="images/Waveform2.png" width="800">
+<img src="images/Waveform3.png" width="800">
 
 ## Environment / tools used
 
